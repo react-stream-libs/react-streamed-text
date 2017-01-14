@@ -4,7 +4,8 @@
     "build_es6": "tsc --project tsconfig.lib_es6.json",
     "es6_to_es5": "babel lib_es6 --out-dir lib",
     "cp_d.ts_files_shallow": "copyfiles --up 1 'lib_es6/*.d.ts' lib",
-    "build": "npm run build_es6 && npm run es6_to_es5 && npm run cp_d.ts_files_shallow"
+    "build": "npm run build_es6 && npm run es6_to_es5 && npm run cp_d.ts_files_shallow",
+    "prepublish": "npm run build"
   },
   "name": "react-streamed-text",
   "version": "0.0.1",
