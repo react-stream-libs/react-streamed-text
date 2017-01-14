@@ -6,7 +6,7 @@
     "cp_d.ts_files_shallow": "copyfiles --up 1 'lib_es6/*.d.ts' lib",
     "build": "npm run build_es6 && npm run es6_to_es5 && npm run cp_d.ts_files_shallow"
   },
-  "name": "react-text-streamed-component",
+  "name": "react-streamed-text",
   "version": "0.0.1",
   "description": "Text-Streamed React component",
   "main": "lib/ReactStreamedText.js",
