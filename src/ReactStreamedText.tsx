@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as _ from 'lodash';
 import { findDOMNode } from 'react-dom';
 import {
   Observable,
@@ -8,7 +9,8 @@ import {
 export type PropsType = {
   tagName: string,
   textStream: Observable<string>,
-};
+} & React.HTMLProps<HTMLParagraphElement | HTMLHeadElement>;
+
 export type StateType = {
   text?: string,
 };
@@ -40,13 +42,12 @@ export default class ReactStreamedText
   }
   render() {
     const {
-      tagName,
-    } = this.props;
-    const {
       text,
     } = this.state;
+
+    const props = _.omit(this.props, ['tagName', 'textStream']);
     return React.createElement(
-      tagName, Object.assign({}, this.props, {
+      this.props.tagName, Object.assign({}, props, {
         ref: 'targetDOM',
       }), text
     );
