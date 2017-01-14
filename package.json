@@ -23,10 +23,12 @@
     "rxjs": "^5.0.3"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.50",
     "@types/react": "^15.0.0",
     "@types/react-dom": "^0.14.20",
     "babel-cli": "^6.18.0",
     "copyfiles": "^1.0.0",
+    "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "rxjs": "^5.0.3",
